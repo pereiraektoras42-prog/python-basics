@@ -14,3 +14,15 @@ while True : #  infinite loop
         task = input("Enter the task to add:")
         tasks.append(task)
         print("Task" + task + "added!")
+
+    elif choice == 2:
+        for i in tasks:
+            print(i)
+    elif choice == 3:
+        task = input("Enter the name of task you want to remove:")
+        tasks.remove(task)
+        print("task " + task + " removed!")
+
+    elif choice == 4:
+        print("Exiting To-Do List App. Goodbey!")
+        break
