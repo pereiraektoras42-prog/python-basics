@@ -1,22 +1,32 @@
-my_dict = {"apple": "a fruit", "book": " a set of written or printed pages]"}
-print(my_dict,'\n')
+def cups_to_grams(cups, ingredients):
+    conversion_rates = {
+        "flour": 120, # 1 cup = 120g for flour
+        "sugar": 200, 
+        "butter": 230,
+        "milk": 240,
+        }
 
-#adding a new key value pair
+    if ingredients in conversion_rates:
+        grams = cups * conversion_rates[ingredients]
+        return grams
+    else:
+        return "conversion rate for this ingredient is not available."
 
-my_dict["car"] = "a vehicle"
-print(my_dict,'\n')
+# Convert tablespoons to teaspoons
+def tablespoons_to_teaspoons(tablespoons):
+    return tablespoons * 3
 
-#updating an item
+# Convert grams to cups
+def grams_to_cups(grams, ingredients):
+    conversion_rates = {
+        "flour": 120, # 1 cup = 120g for flour
+        "sugar": 200,
+        "butter": 230,
+        "milk": 240,
+        }
 
-my_dict["apple"] = "a sweet fruit"
-print(my_dict,'\n')
-
-#deleting an item
-
-del my_dict["book"]
-print(my_dict,'\n')
-
-#removing an item
-
-my_dict.pop("car")
-print(my_dict,'\n')
+    if ingredients in conversion_rates:
+        cups = grams / conversion_rates[ingredients]
+        return cups
+    else:
+        return "conversion rate for this ingredient is not available."
